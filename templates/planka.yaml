@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: planka 
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 1.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        planka:
+          image:
+            tag: 2.0.0-rc.3
+    chart: planka
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: planka
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  
