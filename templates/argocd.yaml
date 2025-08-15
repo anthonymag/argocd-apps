@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 0.5.0
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        argo-cd:
+          server:
+            image:
+              tag: v3.1.0
+    chart: argocd
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  
