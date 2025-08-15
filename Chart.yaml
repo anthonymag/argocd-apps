@@ -1,0 +1,8 @@
+apiVersion: v2
+name: mugiwara
+description: Anthony's home lab apps
+
+type: application
+
+version: 0.1.0
+
