@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-test
+  namespace: nginx-test
+spec:
+  destination:
+    namespace: nginx-test
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://helm.nginx.com/stable
+    targetRevision: 2.2.2
+    chart: nginx-ingress
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      enabled: true
+
