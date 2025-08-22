@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 1.0.4
+    targetRevision: 1.1.0
     helm:
       valueFiles:
         - values.yaml
@@ -24,4 +24,3 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
-  
