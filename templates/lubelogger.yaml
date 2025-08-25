@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lubelogger
+  namespace: lubelogger
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 1.0.4
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        lubelogger:
+          image:
+            tag: v1.4.9
+    chart: lubelogger
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lubelogger
+  syncPolicy:
+    automated:
+      selfHeal: true
+  
