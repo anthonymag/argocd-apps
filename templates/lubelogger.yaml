@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: lubelogger
   namespace: lubelogger
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -23,7 +21,6 @@ spec:
     namespace: lubelogger
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      allowEmpty: true
     syncOptions:
       - CreateNamespace=true
