@@ -14,7 +14,7 @@ spec:
         argo-cd:
           server:
             image:
-              tag: v3.1.2
+              tag: v3.1.4
     chart: argocd
   destination:
     server: https://kubernetes.default.svc
