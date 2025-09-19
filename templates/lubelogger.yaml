@@ -13,17 +13,13 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 1.2.0
+    targetRevision: 1.2.1
     helm:
       valueFiles:
         - values.yaml
       parameters:
         - name: lubelogger.image.tag
           value: v1.5.1
-      #values: |
-      #  lubelogger:
-      #    image:
-      #      tag: v1.5.1
     chart: lubelogger
   destination:
     server: https://kubernetes.default.svc
