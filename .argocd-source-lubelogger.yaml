@@ -6,3 +6,6 @@ helm:
   - name: image.tag
     value: v1.5.2
     forcestring: true
+  - name: lubelogger.image
+    value: ghcr.io/hargata/lubelogger
+    forcestring: true
