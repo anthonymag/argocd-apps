@@ -9,3 +9,6 @@ helm:
   - name: argo-cd.server.image.repository
     value: quay.io/argoproj/argocd
     forcestring: true
+  - name: argo-cd.server.image.tag
+    value: v3.1.6
+    forcestring: true
