@@ -1,8 +1,0 @@
-helm:
-  parameters:
-  - name: lubelogger.image.repository
-    value: ghcr.io/hargata/lubelogger
-    forcestring: true
-  - name: image.tag
-    value: v1.5.2
-    forcestring: true
