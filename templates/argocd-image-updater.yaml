@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 0.2.0
+    targetRevision: 0.2.1
     helm:
       valueFiles:
         - values.yaml
