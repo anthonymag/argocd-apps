@@ -8,7 +8,6 @@ metadata:
     argocd-image-updater.argoproj.io/git-repository: https://github.com/anthonymag/argocd-apps.git
     argocd-image-updater.argoproj.io/git-branch: main
     argocd-image-updater.argoproj.io/lubelogger.update-strategy: semver
-    argocd-image-updater.argoproj.io/lubelogger.helm.image-name: lubelogger.image.repository
     argocd-image-updater.argoproj.io/lubelogger.helm.image-tag: lubelogger.image.tag
 spec:
   project: default
@@ -18,6 +17,10 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+      values: |
+        lubelogger:
+          image:
+            tag: v1.5.1
     chart: lubelogger
   destination:
     server: https://kubernetes.default.svc
