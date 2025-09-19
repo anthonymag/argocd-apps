@@ -8,7 +8,6 @@ metadata:
     argocd-image-updater.argoproj.io/git-repository: https://github.com/anthonymag/argocd-apps.git
     argocd-image-updater.argoproj.io/git-branch: main
     argocd-image-updater.argoproj.io/argocd.update-strategy: semver
-    argocd-image-updater.argoproj.io/argocd.helm.image-name: argo-cd.server.image.repository
     argocd-image-updater.argoproj.io/argocd.helm.image-tag: argo-cd.server.image.tag
 spec:
   project: default
