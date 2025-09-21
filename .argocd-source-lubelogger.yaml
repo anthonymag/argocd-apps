@@ -6,3 +6,6 @@ helm:
   - name: image.name
     value: ghcr.io/hargata/lubelogger
     forcestring: true
+  - name: lubelogger.image.repository
+    value: ghcr.io/hargata/lubelogger
+    forcestring: true
