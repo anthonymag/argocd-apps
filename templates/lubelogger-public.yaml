@@ -20,7 +20,7 @@ spec:
         valueFiles:
           - $values/lubelogger-values/values.yaml
     - ref: values
-      repoURL: https://anthonymag.github.io/helm-charts.git
+      repoURL: https://github.com/anthonymag/helm-charts.git
       targetRevision: main
   destination:
     server: https://kubernetes.default.svc
