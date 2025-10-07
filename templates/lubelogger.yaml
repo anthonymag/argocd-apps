@@ -27,6 +27,6 @@ spec:
     namespace: lubelogger
   syncPolicy:
     automated:
-      selfHeal: true
+      selfHeal: false
       prune: true
 
