@@ -18,9 +18,9 @@ spec:
       helm:
         releaseName: lubelogger-public
         valueFiles:
-          - $values/lubelogger-values/values.yaml
+          - $values/lubelogger/values.yaml
     - ref: values
-      repoURL: https://github.com/anthonymag/helm-charts.git
+      repoURL: https://github.com/anthonymag/helm-values.git
       targetRevision: main
   destination:
     server: https://kubernetes.default.svc
