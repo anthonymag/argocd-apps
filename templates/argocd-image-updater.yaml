@@ -14,7 +14,7 @@ spec:
         argocd-image-updater:
           server:
             image:
-              tag: v0.16.0
+              tag: v0.17.0
     chart: argocd-image-updater
   destination:
     server: https://kubernetes.default.svc
