@@ -10,11 +10,9 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-      values: |
-        argocd-image-updater:
-          server:
-            image:
-              tag: v1.0.1
+      parameters:
+        - name: argocd-image-updater.server.image.tag
+          value: v1.0.1
     chart: argocd-image-updater
   destination:
     server: https://kubernetes.default.svc
