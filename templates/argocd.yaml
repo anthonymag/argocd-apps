@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: argocd=quay.io/argoproj/argocd:~v3.1
+    argocd-image-updater.argoproj.io/image-list: argocd=quay.io/argoproj/argocd:~v3.2
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-repository: https://github.com/anthonymag/argocd-apps.git
     argocd-image-updater.argoproj.io/git-branch: main
@@ -19,7 +19,7 @@ spec:
         - values.yaml
       parameters:
         - name: argo-cd.server.image.tag
-          value: v3.1.9
+          value: v3.2.0
     chart: argocd
   destination:
     server: https://kubernetes.default.svc
