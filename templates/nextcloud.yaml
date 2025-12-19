@@ -18,7 +18,15 @@ spec:
     - group: '*'
       kind: Secret
       jqPathExpressions:
-        - '.data.*'
+        - .data.nextcloud-password
+        - .data.nextcloud-username
+        - .data.smtp-host
+        - .data.smtp-password
+        - .data.smtp-username
+        - .data.db-hostname
+        - .data.db-name
+        - .data.db-password
+        - .data.db-username
   destination:
     server: https://kubernetes.default.svc
     namespace: nextcloud
