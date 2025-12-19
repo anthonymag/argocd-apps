@@ -14,6 +14,11 @@ spec:
         - name: nextcloud.image.tag
           value: 32.0.3
     chart: nextcloud
+  ignoreDifferences:
+    - group: '*'
+      kind: Secret
+      jqPathExpressions:
+        - '.data.*'
   destination:
     server: https://kubernetes.default.svc
     namespace: nextcloud
@@ -23,4 +28,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  
+
