@@ -10,5 +10,5 @@ helm:
     value: quay.io/argoproj/argocd
     forcestring: true
   - name: argo-cd.server.image.tag
-    value: v3.2.0
+    value: v3.2.3
     forcestring: true
