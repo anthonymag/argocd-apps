@@ -6,27 +6,14 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 0.2.2
+    targetRevision: 1.0.0
     helm:
       valueFiles:
         - values.yaml
       parameters:
         - name: nextcloud.image.tag
-          value: 32.0.3
+          value: 32.0.5
     chart: nextcloud
-  ignoreDifferences:
-    - group: '*'
-      kind: Secret
-      jqPathExpressions:
-        - .data.nextcloud-password
-        - .data.nextcloud-username
-        - .data.smtp-host
-        - .data.smtp-password
-        - .data.smtp-username
-        - .data.db-hostname
-        - .data.db-name
-        - .data.db-password
-        - .data.db-username
   destination:
     server: https://kubernetes.default.svc
     namespace: nextcloud
