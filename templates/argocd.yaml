@@ -19,7 +19,7 @@ spec:
         - values.yaml
       parameters:
         - name: argo-cd.server.image.tag
-          value: v3.2.0
+          value: v3.3.0
     chart: argocd
   destination:
     server: https://kubernetes.default.svc
