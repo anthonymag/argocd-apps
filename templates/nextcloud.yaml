@@ -6,13 +6,13 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 1.1.7
+    targetRevision: 1.1.8
     helm:
       valueFiles:
         - values.yaml
       parameters:
         - name: nextcloud.image.tag
-          value: 32.0.5
+          value: 32.0.6
     chart: nextcloud
   destination:
     server: https://kubernetes.default.svc
