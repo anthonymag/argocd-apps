@@ -12,7 +12,7 @@ spec:
         - values.yaml
       parameters:
         - name: planka.image.tag
-          value: v2.0.0
+          value: 2.0.0
     chart: planka
   destination:
     server: https://kubernetes.default.svc
