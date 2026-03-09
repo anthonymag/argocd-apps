@@ -12,7 +12,7 @@ spec:
         - values.yaml
       parameters:
         - name: argocd-image-updater.server.image.tag
-          value: v1.1.0
+          value: v1.1.1
     chart: argocd-image-updater
   destination:
     server: https://kubernetes.default.svc
