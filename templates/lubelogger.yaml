@@ -14,7 +14,7 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 2.1.2
+    targetRevision: 2.1.3
     helm:
       valueFiles:
         - values.yaml
@@ -25,6 +25,12 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: lubelogger
+  ignoreDifferences:
+    - group: apps # https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration
+      kind: StatefulSet
+      name: lubelogger
+      jsonPointers: 
+        - /spec/updateStrategy/rollingUpdate/maxUnavailable
   syncPolicy:
     automated:
       selfHeal: true
