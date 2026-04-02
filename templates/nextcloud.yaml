@@ -12,7 +12,7 @@ spec:
         - values.yaml
       parameters:
         - name: nextcloud.image.tag
-          value: 33.0.0
+          value: 33.0.2
     chart: nextcloud
   destination:
     server: https://kubernetes.default.svc
