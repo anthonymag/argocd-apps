@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: home-assistant 
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 0.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: home-assistant.image.tag
+          value: 2026.6.1
+    chart: home-assistant
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: home-assistant
+
