@@ -6,13 +6,13 @@ spec:
   project: default
   source:
     repoURL: https://anthonymag.github.io/helm-charts/
-    targetRevision: 1.0.5
+    targetRevision: 2.0.0
     helm:
       valueFiles:
         - values.yaml
       parameters:
         - name: immich.server.controllers.main.containers.main.image.tag
-          value: v2.7.5
+          value: v3.0.3
     chart: immich
   destination:
     server: https://kubernetes.default.svc
