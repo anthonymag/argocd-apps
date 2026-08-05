@@ -12,7 +12,7 @@ spec:
         - values.yaml
       parameters:
         - name: home-assistant.image.tag
-          value: 2026.7.4
+          value: 2026.8.0
     chart: home-assistant
   destination:
     server: https://kubernetes.default.svc
