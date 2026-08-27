@@ -12,7 +12,7 @@ spec:
         - values.yaml
       parameters:
         - name: immich.server.controllers.main.containers.main.image.tag
-          value: v3.0.3
+          value: v3.1.0
     chart: immich
   destination:
     server: https://kubernetes.default.svc
