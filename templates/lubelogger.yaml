@@ -29,11 +29,10 @@ spec:
     - group: apps # https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration
       kind: StatefulSet
       name: lubelogger
-      jsonPointers: 
+      jsonPointers:
         - /spec/updateStrategy/rollingUpdate/maxUnavailable
   syncPolicy:
     automated:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-

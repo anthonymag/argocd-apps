@@ -31,4 +31,3 @@ spec:
       - CreateNamespace=true
       # https://argo-cd.readthedocs.io/en/stable/operator-manual/upgrading/3.2-3.3/
       - ServerSideApply=true
-
