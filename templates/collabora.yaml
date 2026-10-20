@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: collabora
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 0.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: collabora-online.image.tag
+          value: 26.04.5.1.1
+    chart: collabora
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: collabora
