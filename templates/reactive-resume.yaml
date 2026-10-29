@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: reactive-resume
+spec:
+  project: default
+  source:
+    repoURL: https://anthonymag.github.io/helm-charts/
+    targetRevision: 0.0.1
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: reactive-resume.image.tag
+          value: v6.0.9
+    chart: reactive-resume
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: reactive-resume
